@@ -5,6 +5,7 @@ public class Client {
     private String name;
     private String password;
     private String phone;
+    private String typeOfClient; //Human or Animal
 
     public Client(String name) {
         this.name = name;
@@ -14,7 +15,11 @@ public class Client {
         return id;
     }
 
-     public void setPassword(String password) {
+    public void setTypeOfClient(String typeOfClient) {
+        this.typeOfClient = typeOfClient;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -22,11 +27,11 @@ public class Client {
         this.phone = phone;
     }
 
+    public String getTypeOfClient() { return typeOfClient; }
+
     public String getPhone() {
         return phone;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 }

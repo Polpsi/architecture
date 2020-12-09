@@ -18,6 +18,11 @@ public class ClientBuilder {
         return this;
     }
 
+    public ClientBuilder typeOfClient(String type) {
+        client.setTypeOfClient(type);
+        return this;
+    }
+
     public Client build() {
         return client;
     }
@@ -27,6 +32,7 @@ public class ClientBuilder {
 Где-то в коде приложения:
 
 Client client = (new ClientBuilder("Artemon"))
+    .setTypeOfClient("animal")
     .password("12345")
     .phone("1234567")
     .build();
